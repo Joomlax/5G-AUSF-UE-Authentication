@@ -6,84 +6,27 @@ public class Auth {
     private String supiOrSuci; //Required
     private String servingNetworkName; //Required
 
+    //ResynchronizationInfo
+    private String rand; //req
+    private String auts; //req
+    //ResynchronizationInfo
     private String pei;
-    private String rand;
-    private String auts;
+
+    //traceData
+    private String traceRef; //req
+    private String traceDepth; //req
+    private String neTypeList; //req
+    private String eventList; //req
+    private String collectionEntityIpv4Addr;
+    private String collectionEntityIpv6Addr;
+    private String interfaceList;
+    //traceData
+
+    private String udmGroupId;
     private String routingIndicator;
     private ArrayList<String> cellCagInfo;
     private boolean n5gcInd;
     private String supportedFeatures;
 
-    //Constructors
-
-
-    public Auth(String supiOrSuci, String servingNetworkName) {
-        this.supiOrSuci = supiOrSuci;
-        this.servingNetworkName = servingNetworkName;
-    }
-
-    public Auth(String supiOrSuci, String servingNetworkName, String pei) {
-        this.supiOrSuci = supiOrSuci;
-        this.servingNetworkName = servingNetworkName;
-        this.pei = pei;
-    }
-
-    public Auth(String supiOrSuci, String servingNetworkName, String pei, String rand) {
-        this.supiOrSuci = supiOrSuci;
-        this.servingNetworkName = servingNetworkName;
-        this.pei = pei;
-        this.rand = rand;
-    }
-
-    public Auth(String supiOrSuci, String servingNetworkName, String pei, String rand, String auts) {
-        this.supiOrSuci = supiOrSuci;
-        this.servingNetworkName = servingNetworkName;
-        this.pei = pei;
-        this.rand = rand;
-        this.auts = auts;
-    }
-
-    public Auth(String supiOrSuci, String servingNetworkName, String pei, String rand, String auts, String routingIndicator) {
-        this.supiOrSuci = supiOrSuci;
-        this.servingNetworkName = servingNetworkName;
-        this.pei = pei;
-        this.rand = rand;
-        this.auts = auts;
-        this.routingIndicator = routingIndicator;
-    }
-
-    public Auth(String supiOrSuci, String servingNetworkName, String pei, String rand, String auts, String routingIndicator, ArrayList<String> cellCagInfo) {
-        this.supiOrSuci = supiOrSuci;
-        this.servingNetworkName = servingNetworkName;
-        this.pei = pei;
-        this.rand = rand;
-        this.auts = auts;
-        this.routingIndicator = routingIndicator;
-        this.cellCagInfo = cellCagInfo;
-    }
-
-    public Auth(String supiOrSuci, String servingNetworkName, String pei, String rand, String auts, String routingIndicator, ArrayList<String> cellCagInfo, boolean n5gcInd) {
-        this.supiOrSuci = supiOrSuci;
-        this.servingNetworkName = servingNetworkName;
-        this.pei = pei;
-        this.rand = rand;
-        this.auts = auts;
-        this.routingIndicator = routingIndicator;
-        this.cellCagInfo = cellCagInfo;
-        this.n5gcInd = n5gcInd;
-    }
-
-    public Auth(String supiOrSuci, String servingNetworkName, String pei, String rand, String auts, String routingIndicator, ArrayList<String> cellCagInfo, boolean n5gcInd, String supportedFeatures) {
-        this.supiOrSuci = supiOrSuci;
-        this.servingNetworkName = servingNetworkName;
-        this.pei = pei;
-        this.rand = rand;
-        this.auts = auts;
-        this.routingIndicator = routingIndicator;
-        this.cellCagInfo = cellCagInfo;
-        this.n5gcInd = n5gcInd;
-        this.supportedFeatures = supportedFeatures;
-    }
-
-    //Created all constructors
+    
 }
