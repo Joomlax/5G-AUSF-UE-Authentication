@@ -9,9 +9,14 @@ public class Auth {
     private String supiOrSuci; //Required
     private String servingNetworkName; //Required
 
+    @Autowired
     private ResynchronizationInfo resynchronizationInfo;
 
     private String pei;
+
+    @Autowired
+    private TraceData traceData;
+
     private String udmGroupId;
     private String routingIndicator;
     private ArrayList<String> cellCagInfo;
@@ -37,6 +42,127 @@ public class Auth {
         this.servingNetworkName = servingNetworkName;
         this.resynchronizationInfo = resynchronizationInfo;
         this.pei = pei;
+    }
+    //Without pei
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, TraceData traceData) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.traceData = traceData;
+    }
+
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, TraceData traceData, String udmGroupId) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.traceData = traceData;
+        this.udmGroupId = udmGroupId;
+    }
+
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, TraceData traceData, String udmGroupId, String routingIndicator) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.traceData = traceData;
+        this.udmGroupId = udmGroupId;
+        this.routingIndicator = routingIndicator;
+    }
+
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, TraceData traceData, String udmGroupId, String routingIndicator, ArrayList<String> cellCagInfo) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.traceData = traceData;
+        this.udmGroupId = udmGroupId;
+        this.routingIndicator = routingIndicator;
+        this.cellCagInfo = cellCagInfo;
+    }
+
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, TraceData traceData, String udmGroupId, String routingIndicator, ArrayList<String> cellCagInfo, boolean n5gcInd) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.traceData = traceData;
+        this.udmGroupId = udmGroupId;
+        this.routingIndicator = routingIndicator;
+        this.cellCagInfo = cellCagInfo;
+        this.n5gcInd = n5gcInd;
+    }
+
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, TraceData traceData, String udmGroupId, String routingIndicator, ArrayList<String> cellCagInfo, boolean n5gcInd, String supportedFeatures) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.traceData = traceData;
+        this.udmGroupId = udmGroupId;
+        this.routingIndicator = routingIndicator;
+        this.cellCagInfo = cellCagInfo;
+        this.n5gcInd = n5gcInd;
+        this.supportedFeatures = supportedFeatures;
+    }
+
+    //With pei
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, String pei, TraceData traceData) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.pei = pei;
+        this.traceData = traceData;
+    }
+
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, String pei, TraceData traceData, String udmGroupId) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.pei = pei;
+        this.traceData = traceData;
+        this.udmGroupId = udmGroupId;
+    }
+
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, String pei, TraceData traceData, String udmGroupId, String routingIndicator) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.pei = pei;
+        this.traceData = traceData;
+        this.udmGroupId = udmGroupId;
+        this.routingIndicator = routingIndicator;
+    }
+
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, String pei, TraceData traceData, String udmGroupId, String routingIndicator, ArrayList<String> cellCagInfo) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.pei = pei;
+        this.traceData = traceData;
+        this.udmGroupId = udmGroupId;
+        this.routingIndicator = routingIndicator;
+        this.cellCagInfo = cellCagInfo;
+    }
+
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, String pei, TraceData traceData, String udmGroupId, String routingIndicator, ArrayList<String> cellCagInfo, boolean n5gcInd) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.pei = pei;
+        this.traceData = traceData;
+        this.udmGroupId = udmGroupId;
+        this.routingIndicator = routingIndicator;
+        this.cellCagInfo = cellCagInfo;
+        this.n5gcInd = n5gcInd;
+    }
+
+    public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, String pei, TraceData traceData, String udmGroupId, String routingIndicator, ArrayList<String> cellCagInfo, boolean n5gcInd, String supportedFeatures) {
+        this.supiOrSuci = supiOrSuci;
+        this.servingNetworkName = servingNetworkName;
+        this.resynchronizationInfo = resynchronizationInfo;
+        this.pei = pei;
+        this.traceData = traceData;
+        this.udmGroupId = udmGroupId;
+        this.routingIndicator = routingIndicator;
+        this.cellCagInfo = cellCagInfo;
+        this.n5gcInd = n5gcInd;
+        this.supportedFeatures = supportedFeatures;
     }
 
     public Auth(String supiOrSuci, String servingNetworkName, ResynchronizationInfo resynchronizationInfo, String pei, String udmGroupId) {
@@ -143,6 +269,14 @@ public class Auth {
     //Getters & Setters Start Point
 
 
+    public TraceData getTraceData() {
+        return traceData;
+    }
+
+    public void setTraceData(TraceData traceData) {
+        this.traceData = traceData;
+    }
+
     public ResynchronizationInfo getResynchronizationInfo() {
         return resynchronizationInfo;
     }
@@ -221,6 +355,7 @@ public class Auth {
                 "supiOrSuci='" + supiOrSuci + '\'' +
                 ", servingNetworkName='" + servingNetworkName + '\'' +
                 ", resynchronizationInfo=" + resynchronizationInfo +
+                ", traceData=" + traceData +
                 ", pei='" + pei + '\'' +
                 ", udmGroupId='" + udmGroupId + '\'' +
                 ", routingIndicator='" + routingIndicator + '\'' +

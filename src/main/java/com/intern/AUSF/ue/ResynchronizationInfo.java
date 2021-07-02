@@ -1,18 +1,14 @@
 package com.intern.AUSF.ue;
 
-public class ResynchronizationInfo{
+public class ResynchronizationInfo {
 
     private String rand;
     private String auths;
-
-
 
     public ResynchronizationInfo(String rand, String auths) {
         this.rand = rand;
         this.auths = auths;
     }
-
-
 
     public String getRand() {
         return rand;
