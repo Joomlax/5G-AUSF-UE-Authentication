@@ -3,18 +3,21 @@ package com.intern.AUSF.ue;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 
+
 public class Auth {
+
+    private Long id;
     private String supiOrSuci; //Required
     private String servingNetworkName; //Required
 
-    @Autowired
+
     private ResynchronizationInfo resynchronizationInfo;
 
     private String pei;
 
-    @Autowired
     private TraceData traceData;
 
     private String udmGroupId;

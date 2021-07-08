@@ -1,5 +1,7 @@
 package com.intern.AUSF.ue;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,5 +30,10 @@ public class AuthService {
                 )
 
         );
+    }
+
+    public void addAuth(Auth auth){
+        System.out.println(auth);
+
     }
 }
