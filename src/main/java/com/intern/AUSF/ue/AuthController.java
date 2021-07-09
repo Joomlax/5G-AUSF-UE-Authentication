@@ -25,11 +25,19 @@ public class AuthController {
     }
 
     @PostMapping()
-    public ResponseEntity<String> addAuth(@RequestBody Auth auth){
+    @ResponseBody
+    public ResponseEntity<UEAuthenticationCtx> addAuth(@RequestBody Auth auth){
         authService.addAuth(auth);
-
-        return ResponseEntity.status(201).body("Tmp response");
-
+        AuthType at = new AuthType("5G_AKA");
+        Av5gAka av = new Av5gAka("rand","hxres","autn");
+        AuthData ad = new AuthData(av);
+        _links lk = new _links("href");
+        UEAuthenticationCtx ueAuthenticationCtx = new UEAuthenticationCtx(
+                at,
+                ad,
+                lk
+        );
+        return ResponseEntity.status(201).body(ueAuthenticationCtx);
     }
 
 }
