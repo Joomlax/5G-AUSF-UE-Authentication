@@ -1,8 +1,5 @@
 package com.intern.AUSF.ue;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
 public class ResynchronizationInfo {
 
     private String rand;

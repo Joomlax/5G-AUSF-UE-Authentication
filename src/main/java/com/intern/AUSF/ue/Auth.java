@@ -3,7 +3,6 @@ package com.intern.AUSF.ue;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.*;
 import java.util.ArrayList;
 
 
